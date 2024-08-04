@@ -49,6 +49,8 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "dockerfile-rails", ">= 1.6"
+  gem 'letter_opener_web', '~> 3.0'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   gem "rack-mini-profiler"
@@ -68,3 +70,8 @@ gem "devise-jwt", "~> 0.12.1"
 gem "tailwindcss-rails", "~> 2.6"
 
 gem "view_component", "~> 3.13"
+
+
+gem "resend", "~> 0.12.0"
+
+gem "litestack", "~> 0.4.4"

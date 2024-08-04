@@ -1,0 +1,14 @@
+<footer>
+  <aside class="items-center grid-flow-col">
+    <%#= image_tag "logo/dynoit.png", class: "h-10 w-10" %>
+    <p>Copyright © 2024 - All right reserved</p>
+  </aside>
+  <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+    <%= link_to "https://twitter.com/rsamuelgarcia", target: "_blank" do %>
+      <%= render "icons/socials/x" %>
+    <% end %>
+    <%= link_to "https://www.linkedin.com/in/renegarcia-software-backend/", target: "_blank" do %>
+      <%= render "icons/socials/linkedin" %>
+    <% end %>
+  </nav>
+</footer>

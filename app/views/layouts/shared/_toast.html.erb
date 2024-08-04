@@ -1,0 +1,26 @@
+<div
+  data-controller="notification"
+  class="transition transform duration-1000 hidden toast toast-end"
+  data-transition-enter-from="opacity-0 translate-x-6"
+  data-transition-enter-to="opacity-100 translate-x-0"
+  data-transition-leave-from="opacity-100 translate-x-0"
+  data-transition-leave-to="opacity-0 translate-x-6"
+>
+  <% flash.each do | key, value |  %>
+    <div role="alert" class="alert alert-<%= key.to_s %>">
+      <% if key.to_s == 'success' %>
+        <%= render 'icons/success_icon' %>
+      <% elsif key.to_s == 'warning'%>
+        <%= render 'icons/warning_icon' %>
+      <% elsif key.to_s == 'error' %>
+        <%= render 'icons/error_icon' %>
+      <% elsif key.to_s == 'notice' %>
+        <%= render 'icons/success_icon' %>
+      <% elsif key.to_s == 'alert'%>
+        <%= render 'icons/warning_icon' %>
+      <% end %>
+      <span><%= value %></span>
+      <button data-action="notification#hide" class="btn btn-ghost btn-sm"><%= render 'icons/x_icon' %></button>
+    </div>
+  <% end %>
+</div>

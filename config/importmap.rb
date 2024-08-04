@@ -26,3 +26,4 @@ pin "postcss-js" # @4.0.1
 pin "process" # @2.0.1
 pin "source-map-js" # @1.2.0
 pin "url" # @2.0.1
+pin "tailwindcss-stimulus-components" # @5.1.1
