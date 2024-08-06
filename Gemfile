@@ -66,12 +66,15 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
-gem "devise-jwt", "~> 0.12.1"
+
 gem "tailwindcss-rails", "~> 2.6"
 
 gem "view_component", "~> 3.13"
 
-
 gem "resend", "~> 0.12.0"
 
 gem "litestack", "~> 0.4.4"
+
+gem 'grape'
+
+gem 'jwt'
