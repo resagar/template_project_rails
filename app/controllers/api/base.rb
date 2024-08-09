@@ -5,6 +5,6 @@ module Api
     format :json
     prefix :api
 
-    mount Api::Auth::AuthController
+    # mount Api::Auth::AuthController
   end
 end

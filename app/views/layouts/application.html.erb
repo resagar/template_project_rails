@@ -12,25 +12,16 @@
   </head>
 
   <body>
-    <div>
-      <%#= render 'layouts/shared/header' %>
+    <div class="main-container">
+      <%= render 'layouts/shared/header' %>
       <main>
         <%= yield %>
       </main>
+      <%= render "layouts/shared/footer", padding_top: "mt-1" %>
     </div>
     <div id="flash-toast"></div>
     <% if flash.any? %>
       <%= render 'layouts/shared/toast' %>
     <% end %>
-
-    <%#= render "shared/modal_confirm" %>
-    <%#= render "shared/navbar_drawer" %>
-    <%#= render "layouts/shared/footer", padding_top: "mt-1" %>
-    <%#= javascript_tag do %>
-<!--      function openDrawer() {-->
-<!--      let drawer = document.querySelector('#show_command')-->
-<!--      drawer.checked = !drawer.checked-->
-<!--      }-->
-    <%# end %>
   </body>
 </html>

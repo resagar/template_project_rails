@@ -7,7 +7,7 @@
         </button>
       </div>
       <%= link_to root_path, class: "flex flex-row justify-center items-center gap-1" do %>
-        <img class="w-12 h-12"  alt="logo" src="<%= path_to_asset "logo/dynoit.svg" %>">
+        <img class="w-12 h-12"  alt="logo" src="<%#= path_to_asset "logo/dynoit.svg" #%>">
         <h1 class="text-xl">Dynoit</h1>
       <% end %>
       <% if user_signed_in? %>

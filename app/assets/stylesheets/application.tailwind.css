@@ -11,3 +11,47 @@
 }
 
 */
+
+
+/*main container*/
+.main-container {
+    width: 100%;
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+/*forms authentication*/
+.container-section-auth {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-auth {
+    @apply card card-bordered shadow-xl
+}
+
+
+.new_user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.field input[type=password], .field input[type=email] {
+    @apply input input-bordered
+}
+
+.field input[type=checkbox] {
+    @apply checkbox checkbox-secondary
+}
+
+.actions input[type="submit"] {
+    @apply btn btn-primary btn-sm
+}

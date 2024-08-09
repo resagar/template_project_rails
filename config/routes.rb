@@ -9,6 +9,6 @@ Rails.application.routes.draw do
 
 #   Api Routes
 
-  mount Api::Base => '/'
+  # mount Api::Base => '/'
 
 end
