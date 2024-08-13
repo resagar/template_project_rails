@@ -1,0 +1,16 @@
+<% case @type%>
+  <% when :link%>
+    <%= link_to @url_path, @html_options do %>
+      <%= content %>
+    <% end %>
+  <% when :button %>
+    <button <%= tag.attributes @html_options %>>
+      <%= content %>
+    </button>
+  <% when :button_to%>
+    <%= button_to @url_path, @html_options do %>
+        <%= content %>
+    <% end %>
+  <% else %>
+    <input type="button" value="<%= content %>" <%= tag.attributes @html_options %>>
+<% end %>

@@ -12,13 +12,13 @@
   </head>
 
   <body>
-    <div class="main-container">
-      <%= render 'layouts/shared/header' %>
-      <main>
-        <%= yield %>
-      </main>
-      <%= render "layouts/shared/footer", padding_top: "mt-1" %>
-    </div>
+    <%= render(MainContainerComponent.new) do %>
+          <%= render(Header::HeaderComponent.new) %>
+          <main class="px-8">
+            <%= yield %>
+          </main>
+          <%= render "layouts/shared/footer", padding_top: "mt-1" %>
+    <% end %>
     <div id="flash-toast"></div>
     <% if flash.any? %>
       <%= render 'layouts/shared/toast' %>
