@@ -18,14 +18,12 @@
     <div class="flex flex-row items-center gap-1">
       <%= render(Header::KofiComponent.new) %>
       <% if user_signed_in? %>
-
-        <%= render Buttons::BottonComponent.new(:link, destroy_user_session_path, nil, " hidden md:inline-flex", html_options: {data: { turbo_method: :delete }}).with_content("Logout") %>
-
+        <%= render Buttons::ButtonComponent.new(:link, destroy_user_session_path, nil, " hidden md:inline-flex", html_options: { data: { turbo_method: :delete }}).with_content("Logout") %>
       <% else %>
 
-        <%= render Buttons::BottonComponent.new(:link, new_user_registration_path, :accent, " hidden md:inline-flex").with_content("Sign up") %>
+        <%= render Buttons::ButtonComponent.new(:link, new_user_registration_path, :accent, " hidden md:inline-flex").with_content("Sign up") %>
 
-        <%= render Buttons::BottonComponent.new(:link, new_user_session_path, nil, " hidden md:inline-flex").with_content("Sign in") %>
+        <%= render Buttons::ButtonComponent.new(:link, new_user_session_path, nil, " hidden md:inline-flex").with_content("Sign in") %>
 
       <% end %>
       <%#= render Buttons::Primary::ButtonComponent.new %>
