@@ -2,7 +2,7 @@
 
 class MainContainerComponent < ViewComponent::Base
   erb_template <<-ERB
-    <div class="container mx-auto h-[100dvh] grid grid-rows-[auto_1fr_auto]">
+    <div class="max-w-7xl mx-auto h-[100dvh] grid grid-rows-[auto_1fr_auto]">
       <%= content %>
     </div>
   ERB

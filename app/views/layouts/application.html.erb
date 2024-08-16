@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="lemonade">
+<html lang="en" data-theme="nord">
   <head>
     <title>TemplateProjects</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -17,7 +17,7 @@
           <main class="px-8">
             <%= yield %>
           </main>
-          <%= render "layouts/shared/footer", padding_top: "mt-1" %>
+          <%= render Footer::FooterComponent.new %>
     <% end %>
     <div id="flash-toast"></div>
     <% if flash.any? %>

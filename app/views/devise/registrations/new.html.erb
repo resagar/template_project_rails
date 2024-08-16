@@ -1,5 +1,5 @@
-<section class="container-section-auth">
-  <div class="card-auth">
+<%= render Shared::SectionCardComponent.new do %>
+  <%= render Shared::CardComponent.new do %>
     <div class="card-title justify-center">
       <h2 class="text-center">Sign up</h2>
     </div>
@@ -31,5 +31,5 @@
 
       <%#= render "devise/shared/links" %>
     </div>
-  </div>
-</section>
+  <% end %>
+<% end %>

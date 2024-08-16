@@ -1,33 +1,25 @@
-<header class="w-full px-8 sticky top-0 z-10 backdrop-blur-lg max-h-14">
-  <nav class="navbar flex-row justify-between bg-base-100 border-b border-base-300 min-h-0 h-14">
+<header class="w-full px-8 py-5 sticky">
+  <nav class="flex flex-row items-center justify-between bg-base-100">
     <div>
       <div class="flex-none md:hidden">
-        <button class="btn btn-square btn-ghost" onclick="openNavbarDrawer()">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-        </button>
+        <%= render Buttons::ButtonComponent.new(:button, nil, :ghost, " btn-square", html_options: { type: "button" }) do %>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <% end %>
       </div>
       <%= link_to root_path, class: "flex flex-row justify-center items-center gap-1" do %>
-        <img class="w-12 h-12"  alt="logo" src="<%#= path_to_asset "logo/dynoit.svg" #%>">
+        <img class="size-12"  alt="logo" src="<%= path_to_asset "logo/app.svg" %>">
         <h1 class="text-xl">Dynoit</h1>
       <% end %>
-      <%# if user_signed_in? %>
-        <%#= link_to "Commands", commands_path, class: "btn btn-ghost hidden md:inline-flex" %>
-      <%# end %>
 
     </div>
     <div class="flex flex-row items-center gap-1">
-      <%= render(Header::KofiComponent.new) %>
       <% if user_signed_in? %>
         <%= render Buttons::ButtonComponent.new(:link, destroy_user_session_path, nil, " hidden md:inline-flex", html_options: { data: { turbo_method: :delete }}).with_content("Logout") %>
       <% else %>
-
         <%= render Buttons::ButtonComponent.new(:link, new_user_registration_path, :accent, " hidden md:inline-flex").with_content("Sign up") %>
 
         <%= render Buttons::ButtonComponent.new(:link, new_user_session_path, nil, " hidden md:inline-flex").with_content("Sign in") %>
-
-
       <% end %>
-      <%#= render Buttons::Primary::ButtonComponent.new %>
     </div>
   </nav>
 </header>
