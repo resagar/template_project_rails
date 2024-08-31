@@ -3,13 +3,13 @@
 module Shared
   class CardComponent < ViewComponent::Base
     erb_template <<~ERB
-      <div class="card card-bordered shadow-xl pt-8<%= @classes %>">
-          <%= content %>
+      <div class="<%= helpers.tw_merge('card card-bordered p-8 rounded-3xl', @class_name) %>">
+          <%= content %> 
       </div>
     ERB
 
-    def initialize(classes = "")
-      @classes = classes
+    def initialize(options = {})
+      @class_name = options[:class_name]
     end
 
   end

@@ -2,26 +2,28 @@
 
 module Buttons
   class ButtonComponent < ViewComponent::Base
+    include TwMergeHelper
 
-    def initialize(type, url_path, color, classes, html_options: {})
-      @type = type
-      @url_path = url_path
-      @color = color
-      @classes = classes
-      @html_options = variant_color.merge(html_options)
+    def initialize(options = {})
+      @type = options[:type]
+      @url_path = options[:url_path]
+      @color = options[:color]
+      @class_name = options[:class_name]
+      @html_options = variant_color.merge(options[:html_options] || {})
     end
+    
 
     private
     def variant_color
       case @color
       when :primary
-        { class: "btn btn-primary#{@classes}" }
+        { class: tw_merge("btn btn-primary", @class_name) }
       when :secondary
-        { class: "btn btn-secondary#{@classes}" }
+        { class: tw_merge("btn btn-secondary", @class_name) }
       when :accent
-        { class: "btn btn-accent#{@classes}" }
+        { class: tw_merge("btn btn-accent", @class_name) }
       else
-        { class: "btn btn-ghost#{@classes}" }
+        { class: tw_merge("btn btn-ghost", @class_name) }
       end
     end
   end

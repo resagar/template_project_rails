@@ -1,0 +1,11 @@
+<div class="px-8 py-8 lg:py-24 flex flex-col gap-10 lg:gap-14 justify-center items-center text-center">
+  <h1 class="font-black text-6xl tracking-tight group">Lorem ipsum dolor sit amet <br />
+    consectetur <span class="border-b-8 border-dotted border-primary/50 group-hover:border-accent/100 duration-200">adipisicing</span> </h1>
+  <p class="text-lg max-w-lg mx-auto leading-relaxed text-secondary-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis excepturi explicabo harum quae aliquid est dolore officiis quos natus iusto quas, autem aut laborum qui cum</p>
+  <ul class="text-secondary-content leading-relaxed space-y-2">
+    <li class="flex flex-row justify-start items-center gap-2"> <span class="text-green-500 size-6"><%= render 'icons/check_icon' %></span> Lorem ipsum dolor sit amet </li>
+    <li class="flex flex-row justify-start items-center gap-2"> <span class="text-green-500 size-6"><%= render 'icons/check_icon' %></span> Lorem ipsum dolor sit amet </li>
+    <li class="flex flex-row justify-start items-center gap-2"> <span class="text-green-500 size-6"><%= render 'icons/check_icon' %></span> Lorem ipsum dolor sit amet </li>
+  </ul>
+  <%= render(Landing::Sections::Buttons::CtaButtonComponent.new url: "#pricing", class_name: "btn-wide") %>
+</div>

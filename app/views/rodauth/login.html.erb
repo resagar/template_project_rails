@@ -1,0 +1,9 @@
+<%= render Shared::SectionCardComponent.new do %>
+  <%= render Shared::CardComponent.new(class_name: "shadow-xl") do %>
+    <div class="flex-1 space-y-4">
+      <%== rodauth.login_form_header() %>
+      <%= render "login_form" %>
+      <%== rodauth.login_form_footer %>
+    </div>
+  <% end %>
+<% end %>

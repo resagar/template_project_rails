@@ -1,0 +1,13 @@
+<header class="w-full px-8 py-4">
+  <nav class="flex flex-row items-center justify-between bg-base-100">
+    <div>
+      <%= link_to root_path, class: "flex flex-row justify-center items-center gap-1" do %>
+        <img class="size-12"  alt="logo" src="<%= path_to_asset "logo/app.svg" %>">
+        <h1 class="text-xl">Template</h1>
+      <% end %>
+    </div>
+    <!--    <div class="flex flex-row items-center gap-1">-->
+    <%#= render Buttons::ButtonComponent.new(type: :link, url_path: new_user_session_path, color: nil, class_name: "hidden md:inline-flex").with_content("Login") %>
+    <!--    </div>-->
+  </nav>
+</header>

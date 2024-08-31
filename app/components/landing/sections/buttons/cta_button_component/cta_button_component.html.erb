@@ -1,0 +1,6 @@
+<%= link_to @url, class: helpers.tw_merge("btn text-neutral-100 hover:shadow-xl btn-primary btn-circle group", @class_name) do %>
+  Get App 
+  <span class="size-4 fill-primary-content group-hover:scale-110 group-hover:translate-x-6 transition-transform duration-300">
+    <%= render 'icons/arrow_send_horizontal' %>
+  </span>
+<% end %>

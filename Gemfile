@@ -78,3 +78,6 @@ gem "litestack", "~> 0.4.4"
 gem 'grape'
 
 gem 'jwt'
+gem "tailwind_merge", "~> 0.12.2"
+
+gem "rodauth-rails", "~> 1.15"

@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="nord">
   <head>
-    <title>TemplateProjects</title>
+    <title> <%= @page_title %> | TemplateProjects</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="charset" content="utf-8" >
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
     <%= render(MainContainerComponent.new) do %>
-          <%= render(Header::HeaderComponent.new) %>
-          <main class="px-8">
-            <%= yield %>
-          </main>
-          <%= render Footer::FooterComponent.new %>
+      <%= render(Header::HeaderComponent.new) %>
+      <main class="px-8">
+        <%# if notice %>
+        <!--          <div class="alert alert-success"><%#= notice %></div>-->
+        <%# end %>
+        <%# if alert %>
+        <!--          <div class="alert alert-danger"><%#= alert %></div>-->
+        <%# end %>
+        <%= yield %>
+      </main>
+      <%= render Footer::FooterComponent.new %>
     <% end %>
     <div id="flash-toast"></div>
     <% if flash.any? %>

@@ -1,0 +1,94 @@
+<div class="h-full w-full flex flex-row justify-center items-center gap-8">
+  <%= render Shared::CardComponent.new(class_name:"max-w-md gap-5 lg:gap-8") do %>
+    <div class="flex flex-col justify-center items-start text-left">
+      <p class="text-lg lg:text-xl font-bold">Precio 1</p>
+      <p class="mt-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+    </div>
+    <div class="grid grid-cols-[max-content_max-content_max-content] gap-2">
+      <div class="flex flex-col justify-end h-full">
+        <p class="text-lg">
+          <del>$5</del>
+        </p>
+      </div>
+      <p class="text-5xl tracking-tight font-extrabold">$95</p>
+      <div class="flex flex-col justify-end h-full">
+        <p class="text-xs uppercase font-semibold opacity-75">usd</p>
+      </div>
+    </div>
+    <ul class="text-secondary-content text-left leading-relaxed space-y-3">
+      <li class="flex flex-row justify-start items-center gap-2">
+        <span class="size-6">
+          <%= render 'icons/check_icon' %>
+        </span>
+        Lorem ipsum dolor sit amet
+      </li>
+      <li class="flex flex-row justify-start items-center gap-2">
+        <span class="size-6">
+          <%= render 'icons/check_icon' %>
+        </span>
+        Lorem ipsum dolor sit amet
+      </li>
+      <li class="flex flex-row justify-start items-center gap-2">
+        <span class="size-6">
+          <%= render 'icons/check_icon' %>
+        </span>
+        Lorem ipsum dolor sit amet
+      </li>
+    </ul>
+    <div class="h-full flex flex-col justify-center items-center">
+      <%= render Landing::Sections::Buttons::CtaButtonComponent.new url: "/", class_name: "btn-block" %>
+      <p>
+        One-time payment, then
+        <span class="underline">it's yours forever</span>
+      </p>
+    </div>
+  <% end %>
+  <%= render Shared::CardComponent.new(class_name:"max-w-md gap-5 lg:gap-8") do %>
+    <div class="flex flex-col justify-center items-start text-left">
+      <p class="text-lg lg:text-xl font-bold">Precio 1</p>
+      <p class="mt-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+    </div>
+    <div class="grid grid-cols-[max-content_max-content_max-content] gap-2">
+      <div class="flex flex-col justify-end h-full">
+        <p class="text-lg">
+          <del>$5</del>
+        </p>
+      </div>
+      <p class="text-5xl tracking-tight font-extrabold">$95</p>
+      <div class="flex flex-col justify-end h-full">
+        <p class="text-xs uppercase font-semibold opacity-75">usd</p>
+      </div>
+    </div>
+    <ul class="text-secondary-content text-left leading-relaxed space-y-3">
+      <li class="flex flex-row justify-start items-center gap-2">
+        <span class="size-6">
+          <%= render 'icons/check_icon' %>
+        </span>
+        Lorem ipsum dolor sit amet
+      </li>
+      <li class="flex flex-row justify-start items-center gap-2">
+        <span class="size-6">
+          <%= render 'icons/check_icon' %>
+        </span>
+        Lorem ipsum dolor sit amet
+      </li>
+      <li class="flex flex-row justify-start items-center gap-2">
+        <span class="size-6">
+          <%= render 'icons/check_icon' %>
+        </span>
+        Lorem ipsum dolor sit amet
+      </li>
+    </ul>
+    <div class="h-full flex flex-col justify-center items-center">
+      <%= render Landing::Sections::Buttons::CtaButtonComponent.new url: "/", class_name: "btn-block" %>
+      <p>
+        One-time payment, then
+        <span class="underline">it's yours forever</span>
+      </p>
+    </div>
+  <% end %>
+</div>
